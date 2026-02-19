@@ -96,4 +96,14 @@ Matplotlib
 - Daily prescription trend over time
 - Data quality comparison (before vs after cleaning)
 ---
-## Sample Outputs
+## Sample Output
+- Interactive bar charts
+- Line trend analysis
+- Statistical anomaly detection
+- Data quality visualization
+## Future Enhancements
+- Streamlit dashboard
+- REST API integration
+- Role-based authentication
+- PDF report generation
+- Cloud deployment (AWS/GCP)
