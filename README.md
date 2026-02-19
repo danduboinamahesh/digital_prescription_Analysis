@@ -107,3 +107,6 @@ Matplotlib
 - Role-based authentication
 - PDF report generation
 - Cloud deployment (AWS/GCP)
+---
+## Conclusion
+The Digital Prescription Record Analysis system provides an efficient and structured way to manage doctors, patients, medicines, and prescriptions using a MySQL database. It ensures accurate record maintenance, reduces manual errors, and improves data accessibility for better healthcare management. Overall, the project demonstrates how database design and data analysis techniques can enhance operational efficiency and support informed decision-making in medical systems.
