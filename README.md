@@ -1,35 +1,90 @@
+# Digital_Prescription_Record_Analysis
 
+Digital Prescription Record Analysis is a Healthcare Informatics project designed to digitize, clean, validate, store, and analyze medical prescription records.
 
-TOOLS & TEECHNOLOGIES USED:
-  1. Python (Pandas, Matplotlib)
-  2. Jupyter Notebook
-  3. MySQL
-  4. SQLAlchemy
-  5. CSV Files (Raw Data)
+The system implements an automated ETL pipeline using Python and stores structured, validated data in MySQL for analytical querying and visualization.
 
+---
 
-ETL PIPELINE: 
+## Project Overview
+In this project:
+
+- Raw CSV files are loaded using Python (Pandas)
+- Data cleaning and validation are performed using defined business rules
+- Clean data is inserted into MySQL tables
+- SQL queries are used to perform analytical operations
+- Matplotlib is used to generate visual dashboards
+This project demonstrates an end-to-end ETL and analytics workflow.
+---
+## Business Rules Implemented
+- Age must be between 0 and 100
+- Duplicate prescriptions are removed
+- Prescriptions without valid patient or doctor are rejected
+- Missing dosage or frequency is replaced with "Not Provided"
+- Unknown gender is marked as "U"
+---
+## System Architecture
+
+```text
+Raw CSV Files
+        ↓
+Python ETL (Pandas)
+    • Deduplication
+    • Null Handling
+    • Business Rule Validation
+        ↓
+MySQL Database
+    • Clean Tables
+    • Constraints Applied
+        ↓
+SQL Analytics
+        ↓
+Matplotlib
+```
+---
+## Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| Python | ETL Processing |
+| Pandas | Data Cleaning & Transformation |
+| MySQL | Relational Data Storage |
+| SQL | Analytical Queries |
+| Matplotlib | Data Visualization |
+---
+## ETL PIPELINE
 
 1. EXTRACT
 
-    Loaded all CSV files into Jupyter Notebook using Pandas.
+    - Loaded all CSV files into Jupyter Notebook using Pandas.
 
 2. TRANSFORM (Data Cleaning & Business Rules)
 
-    Age must be between 0 and 100
+    - Age must be between 0 and 100
    
-    Missing gender → assigned as 'U' (Unknown)
+    - Missing gender → assigned as 'U' (Unknown)
   
-    Missing dosage or frequency → set to "Not Provided"
+    - Missing dosage or frequency → set to "Not Provided"
   
-    Duplicate prescriptions removed
+    - Duplicate prescriptions removed
   
-    Prescriptions with invalid patient, doctor, or medicine IDs rejected
+    - Prescriptions with invalid patient, doctor, or medicine IDs rejected
 
 3. LOAD
    
-    Cleaned data inserted into MySQL tables:
+   Cleaned data inserted into MySQL tables:
   
         patients, doctors, medicines, prescriptions
   
     Database constraints ensure data integrity.
+---
+## Business Insights Generated
+- Most frequently prescribed medicines
+- Doctor-wise prescription volume comparison
+- Gender-wise prescription distribution
+- Age group vs number of prescriptions
+- Detect doctors issuing unusually high prescriptions
+- Daily prescription trend over time
+- Data quality comparison (before vs after cleaning)
+---
+## Sample Outputs
