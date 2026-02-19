@@ -16,6 +16,15 @@ In this project:
 - Matplotlib is used to generate visual dashboards
 This project demonstrates an end-to-end ETL and analytics workflow.
 ---
+## Dataset
+
+The project uses the following CSV files:
+
+- `doctors_1000.csv` – Doctor master data
+- `medicines_1000.csv` – Medicine catalog
+- `patients_1000.csv` – Patient demographics
+- `prescriptions_1000.csv` – Prescription transactions
+---
 ## Business Rules Implemented
 - Age must be between 0 and 100
 - Duplicate prescriptions are removed
